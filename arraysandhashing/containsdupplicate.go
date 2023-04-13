@@ -7,9 +7,9 @@ func ContainsDuplicate(nums []int) bool{
         if _, ok := m[x]; ok{
             return true
         }else{
-            m[x] = true;
+            m[x] = true
         }
     }
 
-    return false;
+    return false
 }

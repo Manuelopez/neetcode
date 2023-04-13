@@ -1,7 +1,5 @@
 package arraysandhashing
 
-
-// my current own solution O(n^3) * too slow *
 func groupAnagrams(strs []string) [][]string {
     m := make(map[[26]int][]string)
 

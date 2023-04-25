@@ -1,14 +1,21 @@
 package arraysandhashing
 
-func TwoSum(nums []int, target int) []int {
-    m := make(map[int]int)
-    for i, x := range nums{
-        if val, ok := m[target - x]; ok{
-            return []int{val, i}
-        }else{
-            m[x] = i
+func twoSum(numbers []int, target int) []int {
+    i := 0
+    j := len(numbers) - 1
+
+    for i < j{
+        curr := numbers[i] + numbers[j]
+        if curr == target{
+            return []int{i + 1, j + 1}
+        }else if curr > target{
+            j--
+        }else {
+            i++
         }
+
+
     }
 
-    return []int{0,0}
+    return []int{0, 0}
 }
